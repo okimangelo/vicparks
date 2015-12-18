@@ -1,0 +1,29 @@
+footer {
+    .footer-copy {
+        ul.footer-links {
+            float: left;
+            padding: 0;
+            margin: 1.2em 0;
+            list-style: none;
+            width: 100%;
+            >li {
+                float: left;
+                >a {
+                    border-right: 1px solid;
+                    font-size: $text-xs;
+                    font-weight: normal;
+                    margin-left: 1em;
+                    padding-right: 1em;
+                    &:hover {
+                        color: white;
+                    }
+                }
+                &:last-child {
+                    > a {
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}

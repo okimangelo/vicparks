@@ -1,0 +1,21 @@
+.home-slider {
+  section.row{
+    .slider-title{
+        h1 {
+            font-weight: 400;
+        }
+    }
+    .slider-caption {
+      background-color: transparentize($brand-info, .2);
+      height: 100%;
+      display: table;
+      .align-bottom {
+          font-weight: 400;
+          display: table-cell;
+          vertical-align: bottom;
+          padding-bottom: 20px;
+      }
+    }
+  }
+
+}

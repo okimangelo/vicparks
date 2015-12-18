@@ -1,1 +1,46 @@
 
+
+
+
+
+
+
+
+/* Colors and Backgrounds */
+
+.bg-primary{
+  background-color: $brand-primary;
+  * {color: white;}
+  .form-group input[type=text],
+  .comment-form input[type=email],
+  .comment-form input[type=url],
+  .comment-form textarea,
+  .form-control,
+  .search-form .search-field {
+      background-color: transparent;
+      border-color: #80a5cd;
+      @include placeholder(white);
+  }
+}
+.bg-success{ background-color: $brand-success; * {color: white;}}
+.bg-info{ background-color: $brand-info; * {color: white;}}
+.bg-warning{ background-color: $brand-warning; * {color: white;}}
+.bg-danger{ background-color: $brand-danger; * {color: white;}}
+.bg-teal{ background-color: $brand-teal; * {color: white;}}
+
+.text-danger {
+  color: $brand-danger;
+}
+
+.text-white {
+    color: white;
+     * {
+        color: white;
+    }
+}
+
+@media screen and (min-width: $screen-md) {
+    .md-pull-right {
+        float: right;
+    }
+}

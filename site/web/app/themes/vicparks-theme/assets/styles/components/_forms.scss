@@ -1,4 +1,47 @@
+.comment-form input[type=text],
+.comment-form input[type=email],
+.comment-form input[type=url],
+.comment-form textarea,
+.form-control,
+.search-form .search-field,
+select.form-control { border-radius: 0;}
+
 // Search form
+section.search-box.bg-primary {
+    padding-top: 1em;
+    padding-bottom: 3em;
+    .search-title {
+        float: left;
+        width: 100%;
+        * {
+            float: left;
+        }
+      img {
+          margin-top: 25px;
+          margin-left: 12px;
+      }
+    }
+    .search-form {
+        margin-top: 30px;
+        label {
+            font-family: $headings-font-family;
+            font-size: $text-xs;
+            text-transform: uppercase;
+        }
+        .form-control {
+            font-size: $text-xs;
+            height: 48px;
+            width: 253px;
+            margin: 0 1em;
+        }
+        input.btn.btn-danger {
+          border-radius: 0;
+          height: 48px;
+          text-transform: uppercase;
+        }
+    }
+}
+
 .search-form {
   @extend .form-inline;
 }
@@ -12,4 +55,9 @@
 .search-form .search-submit {
   @extend .btn;
   @extend .btn-default;
+}
+
+
+form.form-inline {
+    .form-group {}
 }

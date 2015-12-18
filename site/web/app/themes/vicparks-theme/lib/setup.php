@@ -4,6 +4,11 @@ namespace Roots\Sage\Setup;
 
 use Roots\Sage\Assets;
 
+define('ASSETS_URL',get_template_directory_uri().'/assets');
+define('DIST_URL',get_template_directory_uri().'/dist');
+define('IMAGES_URL',get_template_directory_uri().'/dist/images');
+
+
 /**
  * Theme setup
  */
@@ -26,6 +31,9 @@ function setup() {
 
   // Register wp_nav_menu() menus
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
+  register_nav_menus([
+    'top_navigation' => __('Top Navigation', 'sage')
+  ]);
   register_nav_menus([
     'primary_navigation' => __('Primary Navigation', 'sage')
   ]);
@@ -85,7 +93,7 @@ function display_sidebar() {
     // @link https://codex.wordpress.org/Conditional_Tags
     is_404(),
     is_front_page(),
-    is_page_template('template-custom.php'),
+    is_page_template('template-home.php'),
   ]);
 
   return apply_filters('sage/display_sidebar', $display);

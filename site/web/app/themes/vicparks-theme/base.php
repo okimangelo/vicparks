@@ -17,6 +17,7 @@ use Roots\Sage\Wrapper;
     <?php
       do_action('get_header');
       get_template_part('templates/header');
+      do_action('after_header');
     ?>
     <div class="wrap container" role="document">
       <div class="content row">

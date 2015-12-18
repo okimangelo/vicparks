@@ -1,0 +1,16 @@
+.icon-circle {
+    background-color: white;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    height: 35px;
+    width: 35px;
+    padding: 8px;
+  .bg-primary & { color: $brand-primary;}
+  .bg-info & { color: $brand-info;}
+  .bg-success & { color: $brand-success;}
+  .bg-danger &,
+  &.brand-danger{ color: $brand-danger;}
+}
+
+

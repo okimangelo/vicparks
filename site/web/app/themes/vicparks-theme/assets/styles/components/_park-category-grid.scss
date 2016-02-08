@@ -1,0 +1,29 @@
+section.parks-grid{
+  h3 {
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+  }
+  aside.grid-content{
+    @extend .col-md-4;
+    @extend .col-sm-6;
+    border: 2px solid #ffffff;
+    display: table;
+    padding: 0;
+    .content-meta-holder {
+      display: table-cell;
+      vertical-align: bottom;
+      > .content-meta {
+        @extend .clearfix;
+        padding: 15px;
+        h4 {
+          margin-top:0;
+        }
+        .grid-footer {
+          p {
+            width: 85%;
+          }
+        }
+      }
+    }
+  }
+}

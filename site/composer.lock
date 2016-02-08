@@ -4,7 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d6d075bd453279a2385d9ae63e688ee6",
+    "hash": "127332f6d8f30a4e3871ec320a37b0d6",
+    "content-hash": "aff8328298b221eae1b2616b9641373e",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -19,20 +20,20 @@
         },
         {
             "name": "composer/installers",
-            "version": "v1.0.22",
+            "version": "v1.0.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "bd9b14f094c89c8b5804a4e41edeb7853bb85046"
+                "reference": "6213d900e92647831f7a406d5c530ea1f3d4360e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/bd9b14f094c89c8b5804a4e41edeb7853bb85046",
-                "reference": "bd9b14f094c89c8b5804a4e41edeb7853bb85046",
+                "url": "https://api.github.com/repos/composer/installers/zipball/6213d900e92647831f7a406d5c530ea1f3d4360e",
+                "reference": "6213d900e92647831f7a406d5c530ea1f3d4360e",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "1.0.0"
+                "composer-plugin-api": "^1.0"
             },
             "replace": {
                 "roundcube/plugin-installer": "*",
@@ -113,18 +114,48 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2015-10-29 23:28:48"
+            "time": "2016-01-27 12:54:22"
         },
         {
-            "name": "gravity-forms/gravity-forms",
-            "version": "1.9.5",
+            "name": "discourse/wp-discourse",
+            "version": "0.6.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/discourse/wp-discourse.git",
+                "reference": "d553a76d65b7839477b8492d866faa5cf4f25826"
+            },
             "dist": {
                 "type": "zip",
-                "url": "http://tinbot.com.au/packages/gravityforms_1.9.5.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://api.github.com/repos/discourse/wp-discourse/zipball/d553a76d65b7839477b8492d866faa5cf4f25826",
+                "reference": "d553a76d65b7839477b8492d866faa5cf4f25826",
+                "shasum": ""
             },
-            "type": "wordpress-plugin"
+            "require": {
+                "composer/installers": "1.0.*",
+                "php": ">=5.3"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPLv3"
+            ],
+            "authors": [
+                {
+                    "name": "Sam Saffron",
+                    "homepage": "https://github.com/SamSaffron"
+                },
+                {
+                    "name": "Robin Ward",
+                    "homepage": "https://github.com/eviltrout"
+                }
+            ],
+            "description": "WordPress plugin that allows you to use Discourse as a community engine for your WordPress blog.",
+            "homepage": "https://github.com/discourse/wp-discourse",
+            "keywords": [
+                "discourse",
+                "wordpress"
+            ],
+            "time": "2015-02-25 02:47:06"
         },
         {
             "name": "johnpbloch/wordpress",
@@ -213,28 +244,28 @@
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v2.1.0",
+            "version": "v2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "c10040e0df17d2ee88e9212b50cbe9319e878f59"
+                "reference": "9caf304153dc2288e4970caec6f1f3b3bc205412"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/c10040e0df17d2ee88e9212b50cbe9319e878f59",
-                "reference": "c10040e0df17d2ee88e9212b50cbe9319e878f59",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/9caf304153dc2288e4970caec6f1f3b3bc205412",
+                "reference": "9caf304153dc2288e4970caec6f1f3b3bc205412",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.9"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.0"
+                "phpunit/phpunit": "^4.8|^5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.1-dev"
+                    "dev-master": "2.2-dev"
                 }
             },
             "autoload": {
@@ -260,7 +291,7 @@
                 "env",
                 "environment"
             ],
-            "time": "2015-10-28 18:53:35"
+            "time": "2015-12-29 15:10:30"
         }
     ],
     "packages-dev": [],

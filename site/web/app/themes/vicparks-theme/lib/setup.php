@@ -67,8 +67,8 @@ function widgets_init() {
     'id'            => 'sidebar-primary',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
-    'before_title'  => '<h3>',
-    'after_title'   => '</h3>'
+    'before_title'  => '<h4>',
+    'after_title'   => '</h4>'
   ]);
 
   register_sidebar([
@@ -76,8 +76,8 @@ function widgets_init() {
     'id'            => 'sidebar-footer',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
-    'before_title'  => '<h3>',
-    'after_title'   => '</h3>'
+    'before_title'  => '<h4>',
+    'after_title'   => '</h4>'
   ]);
 }
 add_action('widgets_init', __NAMESPACE__ . '\\widgets_init');
@@ -93,7 +93,9 @@ function display_sidebar() {
     // @link https://codex.wordpress.org/Conditional_Tags
     is_404(),
     is_front_page(),
+    is_singular('park'),
     is_page_template('template-home.php'),
+    is_page_template('template-find-a-park.php'),
   ]);
 
   return apply_filters('sage/display_sidebar', $display);

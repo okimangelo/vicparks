@@ -3,6 +3,7 @@
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "../../bower_components/fontawesome/scss/font-awesome.scss";
 // endbower
 
 @import "common/typography";
@@ -14,10 +15,13 @@
 @import "components/wp-classes";
 @import "components/navs";
 @import "components/sliders";
+@import "components/region-selector";
+@import "components/park-category-grid";
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/footer";
 @import "layouts/pages";
 @import "layouts/home";
 @import "layouts/posts";
+@import "layouts/parks";
 @import "layouts/tinymce";

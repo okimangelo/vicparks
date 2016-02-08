@@ -7,91 +7,49 @@ body.home {
           float: left;
           margin-bottom: 1em;
           width: 100%;
-          > h4 {
+          a {
             float: left;
-            margin: 0;
+            &:hover {
+              text-decoration: none;
+            }
+            hgroup {
+              float: left;
+              > h4 {
+                float: left;
+                margin: 0;
+              }
+              > h5 {
+                clear: left;
+                float: left;
+                margin-top: 0;
+              }
+            }
 
-          }
-          > h5 {
-            clear: left;
-            float: left;
-            margin-top: 0;
-          }
-          span.glyphicon.glyphicon-menu-right {
-            font-size: 45px;
-            float: left;
-            top: 5px;
+            span.glyphicon.glyphicon-menu-right {
+              font-size: 45px;
+              float: left;
+              top: 5px;
+            }
+
           }
         }
       }
 
     }
 
-    /* Region Selector */
-
-  ul.filters {
-      @extend .row;
-      list-style: none;
-      margin-top: 2em;
-      padding: 0;
-      li {
-          @extend .col-md-3;
-          display: table;
-          height: 76px;
-          margin-bottom: 2em;
-          > a {
-            background-color: $brand-primary;
-            color: white;
-            display: table-cell;
-            padding: 1em;
-            text-align: center;
-            text-transform: uppercase;
-            width: 100%;
-            vertical-align: middle;
-            &:hover {
-                background-color: #1e6fc6;
-                text-decoration: none;
-            }
-          }
-      }
-  }
-
-
-  section.parks-grid{
-      h3 { margin-bottom: 2.5rem;}
-      aside.grid-content{
-          @extend .col-md-4;
-          @extend .col-sm-6;
-          border: 2px solid #ffffff;
-          display: table;
-          padding: 0;
-          .content-meta-holder {
-              display: table-cell;
-              vertical-align: bottom;
-              > .content-meta {
-                  @extend .clearfix;
-                  padding: 15px;
-                  h4 {
-                      margin-top:0;
-                  }
-                  .grid-footer {
-                      p {
-                          width: 85%;
-                      }
-                  }
-              }
-          }
-      }
-  }
 
   .featured-news-events {
       h4 {
           font-weight: bold;
-          margin-bottom: 1em;
+          margin: 1em 0 1.5em;
       }
       h5 {
         color: $brand-success;
-        margin: 0;
+        margin: 0 0 1rem;
+      }
+      span.entry-date {
+        margin-bottom: 5px;
+        display: block;
       }
       .latest-news {
           margin-bottom: 1.5em;

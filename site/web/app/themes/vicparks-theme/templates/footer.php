@@ -24,3 +24,4 @@
       </div>
   </div>
 </footer>
+<link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6548692/6798952/css/fonts.css" />

@@ -1,0 +1,30 @@
+/* Region Selector */
+.region-selector {
+  h3 {  font-weight: 700; }
+  ul.filters {
+    @extend .row;
+    list-style: none;
+    margin-top: 2em;
+    padding: 0;
+    li {
+      @extend .col-md-3;
+      display: table;
+      height: 76px;
+      margin-bottom: 2em;
+      > a {
+        background-color: $brand-primary;
+        color: white;
+        display: table-cell;
+        padding: 1em;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+        vertical-align: middle;
+        &:hover {
+          background-color: $brand-danger;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

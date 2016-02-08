@@ -11,6 +11,7 @@ wordpress_sites:
     repo: git@github.com:tinbot-development/vicparks.git
     site_install: true
     site_title: VicParks
+    db_import: ../site/db/latest-db.sql
     admin_user: admin
     admin_password: admin
     admin_email: admin@vicparks.dev

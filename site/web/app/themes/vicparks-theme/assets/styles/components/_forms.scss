@@ -21,7 +21,8 @@ section.search-box.bg-primary {
           margin-left: 12px;
       }
     }
-    .search-form {
+    .search-form,
+    .searchandfilter{
         margin-top: 30px;
         label {
             font-family: $headings-font-family;
@@ -40,6 +41,46 @@ section.search-box.bg-primary {
           text-transform: uppercase;
         }
     }
+  .search-title {
+    h3 {
+      font-weight: 700;
+    }
+  }
+  form.searchandfilter{
+      float: left;
+      margin-top: 30px;
+      padding: 0 15px;
+      width: 100%;
+
+      ul{
+          padding-left: 0;
+          li{
+            float: left;
+              h4 {
+                padding: 5px 1em 10px 5px;
+                font-size: 12px;
+                float: left;
+                line-height: 43px;
+              }
+              input[type="text"],
+              select{
+                @extend .form-control;
+                color: white;
+                font-size: $text-xs;
+                height: 48px;
+                width: 253px;
+                margin: 0 1em;
+              }
+              &.sf-field-submit{
+                  input{
+                    @extend .btn;
+                    @extend .btn-danger;
+
+                  }
+              }
+          }
+      }
+  }
 }
 
 .search-form {

@@ -1,0 +1,63 @@
+body.single-park {
+    .page-header {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    main.main {
+      padding-bottom: 3em;
+    }
+    .park-rating{
+        h5 {
+            margin: 0;
+        }
+    }
+    .park-features {
+        margin: 2em 0 0;
+        padding: 1em 0;
+        h4 {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .member-features {
+            list-style: none;
+            aside {
+                @extend .col-md-3;
+                @extend .col-sm-6;
+                color: black;
+
+                span {
+                  @extend .well;
+                  @extend .well-sm;
+                  display: block;
+                  font-size: 12px;
+                  text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+    section.park-sub-footer {
+      .park-info-holder{
+        > span {
+            float: left;
+            margin-bottom: 10px;
+            width: 100%;
+            i.fa {
+              float: left;
+              margin: 2px 6px 0 0;
+              width: 20px;
+              text-align: center;
+
+              & + *{
+                float: left;
+                width: 85%;
+              }
+            }
+        }
+
+
+      }
+    }
+}

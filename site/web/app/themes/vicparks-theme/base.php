@@ -20,6 +20,9 @@ use Roots\Sage\Wrapper;
       do_action('after_header');
     ?>
     <div class="wrap container" role="document">
+      <div class="row">
+        <?php get_template_part('templates/page', 'header'); ?>
+      </div>
       <div class="content row">
         <main class="main">
           <?php include Wrapper\template_path(); ?>

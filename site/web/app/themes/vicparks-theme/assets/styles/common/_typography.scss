@@ -1,7 +1,21 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,700');
+
+body {
+  font-family: "Gotham SSm A", "Gotham SSm B";
+  font-style: normal;
+  font-weight: 400;
+    p {
+      font-family: "Gotham SSm A", "Gotham SSm B";
+      font-style: normal;
+      font-weight: 400;
+    }
+}
 
 h1, h2, h3, h4, h5, h6 {
     color: $brand-primary;
+    font-family: "Gotham A", "Gotham B";
+    font-style: normal;
+    font-weight: 400;
 }
 
 

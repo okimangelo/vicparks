@@ -46,12 +46,24 @@
     {
       "type": "package",
       "package": {
-        "name": "gravity-forms/gravity-forms",
-        "version": "1.9.5",
+        "name": "events-calendar/events-calendar-pro",
+        "version": "3.12.0",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
-          "url": "http://tinbot.com.au/packages/gravityforms_1.9.5.zip"
+          "url": "http://tinbot.com.au/packages/events-calendar-pro.3.12.0.zip"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "wootickets/wootickets",
+        "version": "3.12.0",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "http://tinbot.com.au/packages/wootickets.3.12.0.zip"
         }
       }
     }
@@ -61,8 +73,10 @@
     "composer/installers": "~1.0.12",
     "vlucas/phpdotenv": "^2.0.1",
     "johnpbloch/wordpress": "4.4",
-    "gravity-forms/gravity-forms" : "1.9.5",
-    "advanced-custom-fields/advanced-custom-fields-pro": "5.0"
+    "advanced-custom-fields/advanced-custom-fields-pro": "5.0",
+    "discourse/wp-discourse": "0.6.4"
+//    "events-calendar/events-calendar-pro": "3.12.0",
+//    "wootickets/wootickets" : "3.12.0"
   },
   "extra": {
     "installer-paths": {

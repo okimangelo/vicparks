@@ -8,7 +8,9 @@
   "private": true,
   "dependencies": {
     "bootstrap-sass": "3.3.6",
-    "fontawesome": "~4.3.0"
+    "fontawesome": "~4.5.0",
+    "hover": "2.0.2",
+    "bigSlide": "~0.9.3"
   },
   "overrides": {
     "bootstrap-sass": {
@@ -37,6 +39,11 @@
       "main": [
         "./scss/font-awesome.scss",
         "./fonts/*"
+      ]
+    },
+    "hover": {
+      "main": [
+        "./scss/hover.scss"
       ]
     }
   }

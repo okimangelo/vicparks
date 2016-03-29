@@ -1,0 +1,27 @@
+body.single-association-matters{
+  .content {
+    margin-top: 2em;
+  }
+  ul.section-content,
+  ul.file-attachments-section{
+    > li {
+        border-bottom: 1px solid #f4f4f4;
+        float: left;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        width: 100%;
+        .img-holder {
+            margin-right: 1em;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+  }
+
+  i.fa.fa-file-pdf-o {
+      color: $brand-danger;
+      margin-right: 8px;
+  }
+}
+

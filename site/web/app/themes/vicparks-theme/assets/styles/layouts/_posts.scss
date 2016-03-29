@@ -1,0 +1,27 @@
+body.single {
+  .page-header {
+    border: none;
+  }
+  .post-meta {
+    text-align: center;
+    span.post-date {
+      border-left: 1px solid;
+      margin-left: 1em;
+      padding-left: 1em;
+    }
+  }
+  main.main {
+      padding-bottom: 2em;
+      .entry-content {
+          p, ul {
+            width: 80%;
+          }
+      }
+  }
+
+  &.single-information-topics {
+    .page-header {
+      margin-bottom: 2em;
+    }
+  }
+}

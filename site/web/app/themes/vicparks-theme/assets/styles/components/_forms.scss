@@ -96,9 +96,24 @@ section.search-box.bg-primary {
 .search-form .search-submit {
   @extend .btn;
   @extend .btn-default;
+  &:hover {
+      background-color: $brand-danger;
+      border-color: $brand-danger;
+  }
 }
 
 
 form.form-inline {
     .form-group {}
+}
+
+/* Inner Pages Search Form below Title */
+
+form#searchform {
+  .search-submit{
+    &:hover {
+      background-color: $brand-danger;
+      border-color: $brand-danger;
+    }
+  }
 }

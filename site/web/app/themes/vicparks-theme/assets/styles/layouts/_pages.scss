@@ -1,12 +1,25 @@
 body.page {
+  .page-header {
+    border: none;
+    margin-bottom: 0;
+  }
+  .wrap.container{
+    .content.row {
+      main.main {
+        min-height: 450px;
+      }
+    }
+  }
   /* Default Page Template */
   &.page-template-default{
       .page-header {
           margin-top: 0;
-          margin-bottom: 3em;
           h1 {
-              margin-bottom: 30px;
+              margin-bottom: 15px;
               text-align: center;
+          }
+          h5 {
+              font-size: 18px;
           }
       }
       .wrap.container{
@@ -18,19 +31,20 @@ body.page {
                   margin-top: 0;
                   margin-bottom: 2em;
                 }
+                p, ul {
+                    width: 80%;
+                }
             }
         }
-
       }
   }
 
   /* Find A Park Template */
-  &.find-a-park{
+  &.find-a-park {
     .park-info-window{
         >a {
             text-decoration: none !important;
         }
-
     }
     .gm-style {
       i.fa {
@@ -50,7 +64,6 @@ body.page {
     }
 
     .page-header{
-        margin-bottom: 2em;
         text-align: center;
     }
     .region-selector{
@@ -95,4 +108,72 @@ body.page {
     }
 
   }
+
+
+  /* Member Dashboard Page */
+  &.page-template-template-members-area{
+    aside.member-dashboard-sidebar{
+      margin-top: 82px;
+    }
+    ul.association-matters {
+        float: left;
+        margin: 1em 0;
+        width: 100%;
+
+        > li {
+            float: left;
+            margin-right: 1em;
+
+            a {
+              @extend .well;
+              @extend .well-sm;
+              //background: $brand-success;
+              //border: none;
+              //color: white;
+              display: block;
+              text-decoration: none;
+              padding: 10px 1em;
+              i.fa {
+                  margin-right: 8px;
+              }
+            }
+        }
+    }
+
+
+  }
+
+  /* Conference Page Template */
+  &.conference {
+    main.main {
+        min-height: inherit !important;
+        padding-top: 2em;
+        p {
+            font-size: 1.2em;
+            text-align: center;
+            width: 75%;
+            margin: auto;
+        }
+    }
+  }
+
+  /* Whats On Page*/
+  &.whats-on {
+      .featured-news-events {
+          padding-bottom: 2em;
+          section.latest-news-holder {
+            .latest-news {
+              margin: 1em 1.2em 1em 0;
+              float: left;
+            }
+          }
+          section.upcoming-events-holder{
+            .upcoming-event {
+                margin-bottom: 1em;
+            }
+          }
+
+      }
+  }
+
 }

@@ -8,6 +8,7 @@ body {
       font-family: "Gotham SSm A", "Gotham SSm B";
       font-style: normal;
       font-weight: 400;
+      line-height: 28px;
     }
 }
 
@@ -16,6 +17,23 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Gotham A", "Gotham B";
     font-style: normal;
     font-weight: 400;
+    > a {
+        color: $brand-primary;
+        &:hover {
+            color: $brand-primary;
+        }
+    }
+}
+
+
+h1 {
+  font-size: 40px;
+}
+
+body.home{
+  h1 {
+    font-size: 70px;
+  }
 }
 
 
@@ -34,5 +52,13 @@ h1, h2, h3, h4, h5, h6 {
     &:hover {
         color: saturate($brand-danger,20%);
     }
+}
+
+.the-excerpt {
+  font-size: 20px;
+  float: none;
+  width: 70%;
+  text-align: center;
+  margin: 0 auto 1em auto;
 }
 

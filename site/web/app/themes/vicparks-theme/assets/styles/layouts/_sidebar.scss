@@ -1,9 +1,14 @@
 .sidebar{
   .widget {
     padding-bottom: 5px;
+    margin-bottom: 1em;
+    h4 { margin-top: 0;}
     ul {
       list-style: none;
       padding: 0;
+      li.cat-item {
+        padding-top: 5px;
+      }
     }
   }
 }

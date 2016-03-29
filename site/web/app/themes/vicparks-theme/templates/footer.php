@@ -4,7 +4,7 @@
       <div class="container">
         <?php
         if (has_nav_menu('top_navigation')) :
-          wp_nav_menu(['theme_location' => 'top_navigation', 'menu_class' => 'nav navbar-nav footer-nav-menu','container_class'=>'row']);
+            wp_nav_menu(['theme_location' => 'top_navigation', 'walker' => new wp_bootstrap_navwalker(), 'menu_class' => 'nav navbar-nav footer-nav-menu']);
         endif;
         ?>
       </div>

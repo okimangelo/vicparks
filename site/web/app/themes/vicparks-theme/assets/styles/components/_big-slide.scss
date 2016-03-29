@@ -1,0 +1,63 @@
+body.push {
+  position: relative;
+  &.admin-bar {
+    nav#menu {
+      padding-top: 1em;
+    }
+  }
+}
+
+.panel-menu {
+  position: fixed;
+  right: -18.625em; /*right or left and the width of your navigation panel*/
+  width: 18.625em; /*should match the above value*/
+}
+
+div.nav-holder {
+  margin: 11px 15px 1em;
+  .menu-link {
+    font-size: 2em;
+    text-decoration: none;
+  }
+}
+
+
+nav#menu {
+  background: $brand-primary;
+  border-radius: 0;
+
+
+  ul.information-topics-menu,
+  ul.slide-category-menu {
+    list-style: none;
+    padding: 2em 0;
+    > li.cat-item {
+      &:hover {
+        //background: $brand-info;
+      }
+      div.cat-title {
+        border-bottom: 1px solid $brand-info;
+        padding: 9px 1em;
+
+      }
+      a {
+        color: white;
+      }
+      ul.children {
+          padding: 0;
+          background-color: lighten($brand-primary, 20);
+          > li {
+            padding: 8px 1em 0 1.5em;
+            list-style: none;
+            &:last-child {
+                padding-bottom: 1.5em;
+            }
+              > a {
+
+              }
+          }
+      }
+    }
+  }
+}
+

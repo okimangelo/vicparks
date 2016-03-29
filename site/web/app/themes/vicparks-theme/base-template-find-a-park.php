@@ -16,10 +16,16 @@ use Roots\Sage\Wrapper;
     <![endif]-->
     <?php
       do_action('get_header');
+
       get_template_part('templates/header');
       do_action('after_header');
-      get_template_part('templates/page', 'header');
-
+      ?>
+      <div class="container">
+        <aside class="row">
+          <?php get_template_part('templates/page', 'header'); ?>
+        </aside>
+      </div>
+      <?php
       display_search_map_markup();
 
       get_template_part('templates/section','region-selector');

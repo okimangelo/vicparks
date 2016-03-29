@@ -11,6 +11,24 @@
   .bg-success & { color: $brand-success;}
   .bg-danger &,
   &.brand-danger{ color: $brand-danger;}
+
+  transform: translate(0,0);
+  -webkit-transition: 0.2s ease-in;
+  -moz-transition: 0.2s ease-in;
+  -o-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+a:hover .icon-circle {
+  transform: translate(8px,0);
+  -webkit-transition: 0.2s ease-in;
+  -moz-transition: 0.2s ease-in;
+  -o-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+.btn {
+    @extend .hvr-fade;
 }
 
 

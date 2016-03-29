@@ -4,16 +4,19 @@
 // bower:scss
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "../../bower_components/fontawesome/scss/font-awesome.scss";
+@import "../../bower_components/hover/scss/hover.scss";
 // endbower
 
 @import "common/typography";
 @import "common/global";
+@import "components/alerts";
 @import "components/buttons";
 @import "components/comments";
 @import "components/forms";
 @import "components/grid";
 @import "components/wp-classes";
 @import "components/navs";
+@import "components/big-slide";
 @import "components/sliders";
 @import "components/region-selector";
 @import "components/park-category-grid";
@@ -22,6 +25,10 @@
 @import "layouts/footer";
 @import "layouts/pages";
 @import "layouts/home";
+@import "layouts/archive";
+@import "layouts/taxonomy";
 @import "layouts/posts";
 @import "layouts/parks";
+@import "layouts/association-matters";
+@import "layouts/preferred-suppliers";
 @import "layouts/tinymce";

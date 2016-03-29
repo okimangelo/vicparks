@@ -1,8 +1,12 @@
 body.home {
+  header.banner {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
     /* Featured Park Section*/
     .featured-park {
       .content-holder {
-         margin: 3em 0 1em;
+         margin: 1em 0 1em;
         .section-title-arrow {
           float: left;
           margin-bottom: 1em;
@@ -10,13 +14,13 @@ body.home {
           a {
             float: left;
             &:hover {
-              text-decoration: none;
+              text-decoration: none !important;
             }
             hgroup {
               float: left;
               > h4 {
                 float: left;
-                margin: 0;
+                margin: 0 0 10px;
               }
               > h5 {
                 clear: left;
@@ -25,12 +29,22 @@ body.home {
               }
             }
 
-            span.glyphicon.glyphicon-menu-right {
-              font-size: 45px;
-              float: left;
-              top: 5px;
-            }
 
+            span.glyphicon.glyphicon-menu-right {
+              float: left;
+              margin-left: 10px;
+            }
+          }
+          .park-info-holder {
+            .park-info {
+              clear: left;
+              float: left;
+              width: 100%;
+              i.fa {
+                float: left;
+                margin: 3px 10px 0 0;
+              }
+            }
           }
         }
       }

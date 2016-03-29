@@ -7,14 +7,15 @@
  *
  */
 
+
 if ( $query->have_posts() )
 {
 	?>
 
 	<div class="pagination">
 
-		<div class="nav-previous"><?php next_posts_link( 'Older posts', $query->max_num_pages ); ?></div>
-		<div class="nav-next"><?php previous_posts_link( 'Newer posts' ); ?></div>
+		<div class="nav-previous"><?php next_posts_link( 'Next', $query->max_num_pages ); ?></div>
+		<div class="nav-next"><?php previous_posts_link( 'Previous' ); ?></div>
 		<?php
 			/* example code for using the wp_pagenavi plugin */
 			if (function_exists('wp_pagenavi'))
@@ -29,56 +30,92 @@ if ( $query->have_posts() )
 	while ($query->have_posts())
 	{
 		$query->the_post();
+		/* Premium Members */
+		if(get_post_meta(get_the_ID(),'park_has_microsite') == 'true'):
+			?>
+			<aside class="park-content clearfix">
+				<div class="row">
+					<?php
+					if ( has_post_thumbnail() ) {
+						echo '<div class="img-holder col-md-3">';
+						the_post_thumbnail("small", array('class'=>'img-responsive'));
+						echo '</div>';
+					}
+					?>
+					<div class="entry-content col-md-9">
+						<h4 class="park-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+						<div class="park-info-holder">
+							<?php
+							if(get_field('address'))
+								echo '<span class="address park-info"><i class="fa fa-map-marker"></i>'.get_field('address').'</span>';
 
-		?>
-		<aside class="park-content clearfix">
-      <div class="row">
-      <?php
-      if ( has_post_thumbnail() ) {
-        echo '<div class="img-holder col-md-3">';
-          the_post_thumbnail("small", array('class'=>'img-responsive'));
-        echo '</div>';
-      }
-      ?>
-        <div class="entry-content col-md-9">
-          <h4 class="park-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-          <div class="park-info-holder">
-            <?php
-            if(get_field('address'))
-              echo '<span class="address park-info"><i class="fa fa-map-marker"></i>'.get_field('address').'</span>';
+							if(get_field('telephone'))
+								echo '<span class="telephone park-info"><i class="fa fa-phone"></i>'.get_field('telephone').'</span>';
 
-            if(get_field('telephone'))
-              echo '<span class="telephone park-info"><i class="fa fa-phone"></i>'.get_field('telephone').'</span>';
+							if(get_field('email'))
+								echo '<span class="email park-info"><i class="fa fa-envelope"></i><a href="mailto:'.get_field('email').'">'.get_field('email').'</a></span>';
+							?>
+						</div>
 
-            if(get_field('email'))
-              echo '<span class="email park-info"><i class="fa fa-envelope"></i><a href="mailto:'.get_field('email').'">'.get_field('email').'</a></span>';
-            ?>
-          </div>
-
-          <p><?php the_excerpt(); ?><p>
-         <?php
-            $park_categories = get_the_terms( get_the_ID(), 'park-category' );
-            if($park_categories):
-              echo '<ul class="park-types">';
-                foreach ($park_categories as $park_category){
-                  echo ' <li><i class="fa fa-star"></i>'.$park_category->name.'</li>';
-                }
-              echo '</ul>';
-            endif;
-            ;?>
+						<p><?php the_excerpt(); ?><p>
+							<?php
+							$park_categories = get_the_terms( get_the_ID(), 'park-category' );
+							if($park_categories):
+								echo '<ul class="park-types">';
+								foreach ($park_categories as $park_category){
+									echo ' <li><i class="fa fa-star"></i>'.$park_category->name.'</li>';
+								}
+								echo '</ul>';
+							endif;
+							;?>
 
 
-        </div>
-      </div>
-		</aside>
-		<?php
+					</div>
+				</div>
+			</aside>
+		<?php else:
+			// Non Premium Members
+			?>
+			<aside class="park-content clearfix">
+				<div class="row">
+					<div class="entry-content col-md-9">
+						<h4 class="park-name"><?php the_title(); ?></h4>
+						<div class="park-info-holder">
+							<?php
+							if(get_field('address'))
+								echo '<span class="address park-info"><i class="fa fa-map-marker"></i>'.get_field('address').'</span>';
+
+							if(get_field('telephone'))
+								echo '<span class="telephone park-info"><i class="fa fa-phone"></i>'.get_field('telephone').'</span>';
+
+							if(get_field('email'))
+								echo '<span class="email park-info"><i class="fa fa-envelope"></i><a href="mailto:'.get_field('email').'">'.get_field('email').'</a></span>';
+							?>
+						</div>
+
+						<p><?php the_content(); ?><p>
+							<?php
+							$park_categories = get_the_terms( get_the_ID(), 'park-category' );
+							if($park_categories):
+								echo '<ul class="park-types">';
+								foreach ($park_categories as $park_category){
+									echo ' <li><i class="fa fa-star"></i>'.$park_category->name.'</li>';
+								}
+								echo '</ul>';
+							endif;
+							;?>
+					</div>
+				</div>
+			</aside>
+			<?php
+		endif;
 	}
 	?>
 
 	<div class="pagination">
 
-		<div class="nav-previous"><?php next_posts_link( 'Older posts', $query->max_num_pages ); ?></div>
-		<div class="nav-next"><?php previous_posts_link( 'Newer posts' ); ?></div>
+		<div class="nav-previous"><?php next_posts_link( 'Next', $query->max_num_pages ); ?></div>
+		<div class="nav-next"><?php previous_posts_link( 'Previous' ); ?></div>
 		<?php
 			/* example code for using the wp_pagenavi plugin */
 			if (function_exists('wp_pagenavi'))
@@ -92,6 +129,6 @@ if ( $query->have_posts() )
 }
 else
 {
-	echo "No Results Found";
+	echo "No Parks Found";
 }
 ?>

@@ -1,4 +1,11 @@
 /* Top Navigation */
+
+.navbar.navbar-success {
+    background-color: $brand-success;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+}
 nav.navbar-top{
     border: 0;
     margin-bottom: 0;
@@ -6,9 +13,12 @@ nav.navbar-top{
     ul.footer-nav-menu {
         > li.menu-item {
             > a {
+              @extend .hvr-fade;
               line-height: 40px;
               text-transform: uppercase;
-              &:hover {
+              &:hover,
+              &:active,
+              &:visited{
                   background-color: $brand-danger;
                   color: white;
               }
@@ -23,8 +33,47 @@ nav.navbar-top{
                   }
                 }
             }
-        }
+            &.brand-danger {
+               > a {
+                   background-color: $brand-danger;
+                   &:hover {
+                     background-color: $brand-primary;
+                   }
+               }
+            }
 
+
+          //Dropdown Menu
+          &.open {
+            > a {
+                background-color: $brand-danger;
+            }
+            >.dropdown-menu {
+              padding: 0;
+              > li {
+                > a {
+                  background-color: $brand-danger;
+                  color: white;
+                  padding: 1em 25px;
+                  &:hover {
+                      color: white;
+                      background-color: lighten($brand-danger, 5);
+                  }
+                }
+              }
+            }
+          }
+
+        }
+    }
+
+    ul.footer-nav-menu {
+       >li {
+         ul.dropdown-menu {
+           top: auto;
+           bottom: 100%;
+         }
+       }
     }
 }
 
@@ -34,6 +83,9 @@ nav.nav-primary {
     ul.nav {
         >li.menu-item {
             >a {
+              @extend .hvr-fade;
+
+              color: $brand-primary;
               font-size: 26px;
               text-transform: lowercase;
               &:hover {
@@ -44,29 +96,89 @@ nav.nav-primary {
             }
         }
     }
+ /* Conference Page Navigation*/
+  &.conference{
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    margin: 0;
+    min-height: inherit;
+    .menu-conference-menu-container {
+      display: block;
+      margin: auto;
+      ul.conference-nav{
+          >li {
+              > a {
+                  @extend .hvr-fade;
+                  border-right: 1px solid #e6e6e6;
+                  color: black;
+                  font-size: 14px;
+                  text-transform: capitalize;
+                  padding: 2px 2em;
+                  margin-top: 1em;
+                  margin-bottom: 1em;
+                  &:hover {
+                      background-color: $brand-danger;
+                  }
+              }
+              &:last-child {
+                  > a {
+                      border: none;
+                  }
+              }
+          }
+      }
+    }
+  }
 }
-//
-//ul.navbar-nav.nav {
-//    margin: 0;
-//}
+
+section#stickyHeader{
+    background-color: white;
+    margin: 10px 0 40px;
+    width: 100%;
+    z-index: 1000;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    &.affix {
+        margin: 0;
+      -webkit-transition: all .4s ease-in-out;
+      transition: all .5s ease-in-out;
+      top: 0;
+        nav.nav-primary.conference{
+            border: none;
+
+        }
+    }
+}
+/* WP Admin Bar plus Sticky Header Affix */
+body.admin-bar {
+    .affix { top: 32px !important;}
+}
 
 
-@media screen and (min-width: $screen-lg){
+body.is-not-mobile{
     nav.navbar-top{
       ul.top-nav-menu,
       ul.footer-nav-menu{
         > li.menu-item {
           > a {
-              padding-left: 1.5em;
-              padding-right: 1.5em;
+              padding-left: 2em;
+              padding-right: 2em;
+              i.fa {
+                margin-right: 1em;
+              }
           }
           &.icon-home {
             >a{
-              line-height: 22px;
               padding-top: 11px;
               padding-bottom: 10px;
               span.glyphicon.glyphicon-home {
-                font-size: 42px;
+                font-size: 20px;
+                line-height: 46px;
+              }
+              &:hover {
+                  span.glyphicon {
+                      @extend .hvr-wobble-vertical;
+                  }
               }
             }
           }
@@ -74,6 +186,19 @@ nav.nav-primary {
 
       }
     }
+  nav.nav-primary{
+        &.conference{
+          .menu-conference-menu-container {
+            width: 84%;
+            ul.conference-nav{
+              >li {
+                > a {
+                }
+              }
+            }
+          }
+        }
+  }
 }
 
 @media screen and (max-width: $screen-xs-max) {

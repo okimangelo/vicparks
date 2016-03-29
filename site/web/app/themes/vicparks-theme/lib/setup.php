@@ -7,6 +7,10 @@ use Roots\Sage\Assets;
 define('ASSETS_URL',get_template_directory_uri().'/assets');
 define('DIST_URL',get_template_directory_uri().'/dist');
 define('IMAGES_URL',get_template_directory_uri().'/dist/images');
+define('UPLOADS_URL',content_url('/uploads/'));
+
+
+
 
 
 /**
@@ -38,11 +42,21 @@ function setup() {
     'primary_navigation' => __('Primary Navigation', 'sage')
   ]);
 
+  register_nav_menus([
+      'conference_navigation' => __('Conference Navigation', 'sage')
+  ]);
+
+  register_nav_menus([
+      'information_topics_side_nav' => __('InformatioN Topics Side Navigation', 'sage')
+  ]);
+
   // Enable post thumbnails
   // http://codex.wordpress.org/Post_Thumbnails
   // http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
   // http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support('post-thumbnails');
+
+  add_image_size('event-thumbnails',250,200);
 
   // Enable post formats
   // http://codex.wordpress.org/Post_Formats
@@ -72,6 +86,15 @@ function widgets_init() {
   ]);
 
   register_sidebar([
+      'name'          => __('Header RHS', 'sage'),
+      'id'            => 'sidebar-header-rhs',
+      'before_widget' => '<section class="widget %1$s %2$s">',
+      'after_widget'  => '</section>',
+      'before_title'  => '<h4>',
+      'after_title'   => '</h4>'
+  ]);
+
+  register_sidebar([
     'name'          => __('Footer', 'sage'),
     'id'            => 'sidebar-footer',
     'before_widget' => '<section class="widget %1$s %2$s">',
@@ -87,15 +110,21 @@ add_action('widgets_init', __NAMESPACE__ . '\\widgets_init');
  */
 function display_sidebar() {
   static $display;
-
-  isset($display) || $display = !in_array(true, [
-    // The sidebar will NOT be displayed if ANY of the following return true.
+  // https://app.asana.com/0/71845293574323/89160543390479 - Remove All Sidebars
+  isset($display) || $display = in_array(true, [
+    // The sidebar will be displayed if ANY of the following return true.
     // @link https://codex.wordpress.org/Conditional_Tags
-    is_404(),
-    is_front_page(),
-    is_singular('park'),
-    is_page_template('template-home.php'),
-    is_page_template('template-find-a-park.php'),
+//    is_404(),
+//    is_front_page(),
+    is_singular('information-topics'),
+    is_singular('association-matters'),
+//    is_archive(),
+//    is_page_template('template-home.php'),
+//    is_page_template('template-find-a-park.php'),
+//    is_page_template('template-members-area.php'),
+//    is_page_template('archive-information-topics.php'),
+//    is_page_template('category-information-topics.php'),
+//    is_post_type_archive(array('post','information-topics'))
   ]);
 
   return apply_filters('sage/display_sidebar', $display);

@@ -17,39 +17,105 @@
   .comment-form textarea,
   .form-control,
   .search-form .search-field {
-      background-color: transparent;
-      border-color: #80a5cd;
-      @include placeholder(white);
+    background-color: transparent;
+    border-color: #80a5cd;
+    @include placeholder(white);
   }
 }
-.bg-success{ background-color: $brand-success; * {color: white;}}
-.bg-info{ background-color: $brand-info; * {color: white;}}
-.bg-warning{ background-color: $brand-warning; * {color: white;}}
-.bg-danger{ background-color: $brand-danger; * {color: white;}}
-.bg-teal{ background-color: $brand-teal; * {color: white;}}
+.bg-success{ background-color: $brand-success; * {color: white;}
+  &.hvr:before {background-color: $brand-success;}
+}
+.bg-info{ background-color: $brand-info; * {color: white;}
+  &.hvr:before {background-color: $brand-info;}
+}
+.bg-warning{ background-color: $brand-warning; * {color: white;}
+  &.hvr:before {background-color: $brand-warning;}
+}
+.bg-danger{ background-color: $brand-danger; * {color: white;}
+  &.hvr:before {background-color: $brand-danger;}
+}
+.bg-teal{
+  background-color: $brand-teal;
+  * {color: white;}
+  .glyphicon { color: $brand-teal;}
+  &.hvr:before {background-color: $brand-teal;}
+
+}
 
 .text-danger {
   color: $brand-danger;
 }
 
 .text-white {
+  color: white;
+  * {
     color: white;
-     * {
-        color: white;
-    }
+  }
 }
 
 @media screen and (min-width: $screen-md) {
-    .md-pull-right {
-        float: right;
-    }
+  .md-pull-right {
+    float: right;
+  }
 }
 
 
 /* Wells */
 
 .well {
-    &.well-primary {
+  &.well-primary {
 
-    }
+  }
 }
+
+
+/* Park Info Icons */
+
+.park-info {
+  display: block;
+  .fa {
+    float: left;
+    margin: 2px 6px 0 0;
+    width: 20px;
+    text-align: center;
+  }
+}
+
+/*Feature Icons*/
+
+.member-features {
+    .icon-access-for-all { background: url('../images/icons-park-features/access-for-all.png') no-repeat 1em center; }
+    .icon-baby-change-area { background: url('../images/icons-park-features/baby-change-area.png') no-repeat 1em center; }
+    .icon-boat-friendly { background: url('../images/icons-park-features/boat-friendly.png') no-repeat 1em center; }
+    .icon-camp-kitchen { background: url('../images/icons-park-features/camp-kitchen.png') no-repeat 1em center; }
+    .icon-cabins { background: url('../images/icons-park-features/cabins.png') no-repeat 1em center; }
+    .icon-childrens-playground { background: url('../images/icons-park-features/childrens-playground.png') no-repeat 1em center; }
+    .icon-convenience-store { background: url('../images/icons-park-features/convenience-store.png') no-repeat 1em center; }
+    .icon-credit-card { background: url('../images/icons-park-features/credit-cards-EFTPOS.png') no-repeat 1em center; }
+    .icon-disabled-facilities { background: url('../images/icons-park-features/disabled-facilities.png') no-repeat 1em center; }
+    .icon-dump-site { background: url('../images/icons-park-features/dump-site.png') no-repeat 1em center; }
+    .icon-dump-point { background: url('../images/icons-park-features/dumppoint.png') no-repeat 1em center; }
+    .icon-ensuite-sites { background: url('../images/icons-park-features/ensuite-sites.png') no-repeat 1em center; }
+    .icon-fishing { background: url('../images/icons-park-features/fishing.png') no-repeat 1em center; }
+    .icon-jumping-pillow { background: url('../images/icons-park-features/jumping-pillow.png') no-repeat 1em center; }
+    .icon-launch-facilities { background: url('../images/icons-park-features/launch-facilities.png') no-repeat 1em center; }
+    .icon-long-term-sites { background: url('../images/icons-park-features/long-term-sites.png') no-repeat 1em center; }
+    .icon-motor-home-sites { background: url('../images/icons-park-features/motorhomesites.png') no-repeat 1em center; }
+    .icon-non-smoking-accom { background: url('../images/icons-park-features/non-smoking.png') no-repeat 1em center; }
+    .icon-on-site-vans { background: url('../images/icons-park-features/on-site-vans.png') no-repeat 1em center; }
+    .icon-playground { background: url('../images/icons-park-features/playground.png') no-repeat 1em center; }
+    .icon-powered-sites { background: url('../images/icons-park-features/powered-sites.png') no-repeat 1em center; }
+    .icon-public-transport { background: url('../images/icons-park-features/public-transport.png') no-repeat 1em center; }
+    .icon-residential-sites { background: url('../images/icons-park-features/residential-sites.png') no-repeat 1em center; }
+    .icon-some-pets-allowed { background: url('../images/icons-park-features/somepetsallowed.png') no-repeat 1em center; }
+    .icon-swimming-pool { background: url('../images/icons-park-features/swimming-pool.png') no-repeat 1em center; }
+    .icon-tennis-court { background: url('../images/icons-park-features/tennis-court.png') no-repeat 1em center; }
+    .icon-tent-sites { background: url('../images/icons-park-features/tent-sites.png') no-repeat 1em center; }
+    .icon-tourist-information { background: url('../images/icons-park-features/tourist-information.png') no-repeat 1em center; }
+    .icon-tv-games-room { background: url('../images/icons-park-features/tv-games-room-1.png') no-repeat 1em center; }
+    .icon-waterfront-location { background: url('../images/icons-park-features/waterfront-location.png') no-repeat 1em center; }
+    .icon-wireless-internet { background: url('../images/icons-park-features/wirelessinternet.png') no-repeat 1em center; }
+
+  span { background-size: 15px !important;}
+}
+

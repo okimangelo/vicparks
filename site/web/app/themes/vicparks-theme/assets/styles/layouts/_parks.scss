@@ -1,7 +1,12 @@
 body.single-park {
     .page-header {
-        margin-left: 15px;
-        margin-right: 15px;
+        background-color: transparent;
+        margin: 44px 15px 22px;
+        padding-bottom: 10px;
+
+        > h1 {
+            color: $brand-primary;
+        }
     }
 
     main.main {
@@ -32,6 +37,7 @@ body.single-park {
                   @extend .well-sm;
                   display: block;
                   font-size: 12px;
+                  padding-left: 4em;
                   text-transform: uppercase;
                 }
             }
@@ -60,4 +66,18 @@ body.single-park {
 
       }
     }
+}
+
+body.page,
+body.archive {
+  main.main{
+    #map {
+        margin-bottom: 2em;
+    }
+    .park-content {
+       margin-bottom: 1em;
+    }
+  }
+
+
 }

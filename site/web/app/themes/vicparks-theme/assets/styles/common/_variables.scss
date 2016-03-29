@@ -36,7 +36,7 @@ $body-bg:               #fff !default;
 $text-color:            $gray-dark !default;
 
 //** Global textual link color.
-$link-color:            $brand-primary !default;
+$link-color:            $brand-success !default;
 //** Link hover color set via `darken()` function.
 $link-hover-color:      darken($link-color, 15%) !default;
 //** Link hover decoration.
@@ -58,10 +58,10 @@ $font-size-base:          16px !default;
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
 
-$font-size-h1:            floor(($font-size-base * 4.375)) !default; // ~70px
-$font-size-h2:            floor(($font-size-base * 3.5)) !default; // ~56px
-$font-size-h3:            ceil(($font-size-base * 2.8125)) !default; // ~45px
-$font-size-h4:            ceil(($font-size-base * 2)) !default; // ~32px
+$font-size-h1:            floor(($font-size-base * 2.5)) !default; // ~40px
+$font-size-h2:            floor(($font-size-base * 2)) !default; // ~32px
+$font-size-h3:            ceil(($font-size-base * 1.9)) !default; // ~30px
+$font-size-h4:            ceil(($font-size-base * 1.8)) !default; // ~29px
 $font-size-h5:            $font-size-base !default;
 $font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~13.6px
 

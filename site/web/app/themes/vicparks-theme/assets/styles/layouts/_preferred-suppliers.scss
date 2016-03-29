@@ -1,0 +1,66 @@
+body.page-template-template-peferred-suppliers-php {
+    /* Supplier Taxonomy Page */
+    ul.preferred-suppliers-list {
+        -webkit-columns: 3 300px;
+        -moz-columns: 3 300px;
+        columns: 3 300px;
+        -webkit-column-gap: 1em;
+        -moz-column-gap: 1em;
+        column-gap: 1em;
+
+        list-style: none;
+        margin-bottom: 3em;
+        padding: 0;
+        > li {
+            font-size: 19px;
+            padding: 3px 0;
+            margin-bottom: 1.5em;
+
+            ul.children {
+                list-style: none;
+                padding: 0;
+                >li {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+body.archive.tax-supplier-category {
+    /* Supplier Archive Page */
+    aside.premium-supplier {
+        .supplier-details {
+            padding: 1em 2em 2em;
+            margin: 1em 0 1.5em;
+            .supplier-contact-info {
+                span.col-xs-6 {
+                    margin-bottom: 6px;
+                    a {
+                        color: white;
+                        &:hover {
+                                color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    aside.non-premium-supplier {
+        &:nth-child(odd) {
+                clear: left;
+        }
+    }
+}
+
+@media screen and (min-width: $screen-md-min) {
+    body.archive.tax-supplier-category {
+        aside.non-premium-supplier {
+            &:nth-child(odd) {
+                clear: left;
+            }
+        }
+    }
+}

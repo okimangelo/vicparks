@@ -22,7 +22,19 @@
 
     if(get_field('email'))
       echo '<span class="email park-info"><i class="fa fa-envelope"></i><a href="mailto:'.get_field('email').'">'.get_field('email').'</a></span>';
+
+    if(get_field('facebook'))
+      echo '<span class="facebook park-info"><i class="fa fa-facebook"></i><a href="mailto:'.get_field('facebook').'">'.get_field('facebook').'</a></span>';
+
+    if(get_field('twitter'))
+      echo '<span class="twitter park-info"><i class="fa fa-twitter"></i><a href="mailto:'.get_field('twitter').'">'.get_field('twitter').'</a></span>';
+
+    if(get_field('google_plus'))
+      echo '<span class="google-plus park-info"><i class="fa fa-google-plus"></i><a href="mailto:'.get_field('google_plus').'">'.get_field('google_plus').'</a></span>';
+
     ?>
+
+
   </address>
   <aside class="col-md-4">
 

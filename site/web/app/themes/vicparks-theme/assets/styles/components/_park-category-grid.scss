@@ -3,27 +3,69 @@ section.parks-grid{
     font-weight: 700;
     margin-bottom: 2.5rem;
   }
-  aside.grid-content{
-    @extend .col-md-4;
-    @extend .col-sm-6;
-    border: 2px solid #ffffff;
-    display: table;
-    padding: 0;
-    .content-meta-holder {
-      display: table-cell;
-      vertical-align: bottom;
-      > .content-meta {
-        @extend .clearfix;
-        padding: 15px;
-        h4 {
-          margin-top:0;
+  a{
+    aside.grid-content{
+      @extend .col-md-4;
+      @extend .col-sm-6;
+      @extend .col-xs-12;
+      border: 2px solid #ffffff;
+      display: table;
+      padding: 0;
+      .content-meta-holder {
+        display: table-cell;
+        vertical-align: bottom;
+        > .content-meta {
+          @extend .clearfix;
+          padding: 15px;
+          h4 {
+            font-size: 22px;
+            margin-top:0;
+          }
+          .grid-footer {
+            p {
+              width: 85%;
+            }
+          }
         }
-        .grid-footer {
-          p {
-            width: 85%;
+      }
+    }
+
+    &:hover {
+      aside.grid-content{
+        .content-meta-holder {
+          > .content-meta {
+            h4 {
+
+            }
+            .grid-footer {
+              p {
+              }
+            }
           }
         }
       }
     }
   }
+
+  @media screen and (min-width: $screen-sm-min) {
+    aside.grid-content {
+      .content-meta-holder {
+          >.content-meta .grid-footer p{
+              min-height: 56px;
+          }
+      }
+    }
+  }
+
+  @media screen and (min-width: $screen-md) and (max-width: 1007px) {
+    aside.grid-content {
+      .content-meta-holder {
+        >.content-meta h4{
+          min-height: 48px;
+        }
+      }
+    }
+  }
+
+
 }
